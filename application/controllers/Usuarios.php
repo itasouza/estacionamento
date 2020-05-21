@@ -5,7 +5,23 @@ defined('BASEPATH') or exit('Ação não permitida');
 class Usuarios extends CI_Controller
 {
 
-  
+  /*=============================================
+   =            Verificar se o usuário está logado    =
+   =============================================*/
+   
+    public function __construct(){
+
+      parent::__construct();
+
+      if(!$this->ion_auth->logged_in()){
+          redirect('login'); 
+      }
+
+    }  
+
+   
+   /*=====  End of Section comment block  ======*/
+   
 
   /*=============================================
   =            tela de listagem           =
@@ -274,7 +290,7 @@ class Usuarios extends CI_Controller
 
     }else{
        
-       if(!$this->ion_auth->is_admin($usuario_id)){
+       if($this->ion_auth->is_admin($usuario_id)){
 
           $this->session->set_flashdata('error','Administrador não pode ser excluido.');
           redirect($this->router->fetch_class());
