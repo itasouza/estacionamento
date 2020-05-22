@@ -7,7 +7,7 @@
     <div class="main-content">
         <div class="container-fluid">
             
-           <?php if ($mensagem = $this->session->flashdata('sucesso')) : ?>
+          <?php if ($mensagem = $this->session->flashdata('sucesso')) : ?>
             <div class="row">
                 <div class="col-md-12">
                     <div class="alert bg-success alert-success text-white alert-dismissible fade show" role="alert">
@@ -21,7 +21,7 @@
         <?php endif; ?>
         
     </div>
-</div>
+  </div>
 
 
 <footer class="footer">
