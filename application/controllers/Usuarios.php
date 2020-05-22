@@ -32,6 +32,7 @@ class Usuarios extends CI_Controller
     $data = array(
       'titulo' => 'Usuários cadastrados',
       'sub_titulo' => 'Chegou a hora de listar os usuários cadastrados no banco de dados',
+      'icone_view' => 'ik ik-users bg-blue',
       'usuarios'  => $this->ion_auth->users()->result(),
 
       'styles' => array(

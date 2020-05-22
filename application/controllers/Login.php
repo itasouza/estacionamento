@@ -32,10 +32,12 @@ class Login extends CI_Controller{
      $identity = html_escape($this->input->post('email'));  
      $password = html_escape($this->input->post('password'));  
      $remember = FALSE;
+
      if($this->ion_auth->login($identity,$password,$remember)){
 
-        $this->session->set_flashdata('sucesso','Seja bem vindo (a)!');
-     	redirect('/');
+        $usuario = $this->core_model->get_by_id('users', array('email' => $identity));
+        $this->session->set_flashdata('sucesso','Seja bem vindo (a) '.$usuario->first_name);
+       	redirect('/');
 
      }else{
 
