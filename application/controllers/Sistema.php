@@ -5,6 +5,7 @@ defined('BASEPATH') or exit('Ação não permitida');
 
 class Sistema extends CI_Controller{
 
+
    
   /*=============================================
    =            Verificar se o usuário está logado    =
