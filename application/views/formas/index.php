@@ -70,36 +70,30 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Categoria</th>
-                                        <th>Valor Hora</th>
-                                        <th>Valor Mensalidade</th>
-                                        <th class="text-center">Número de Vagas</th>
+                                        <th>Forma de pagamento</th>
                                         <th>Ativa</th>
                                         <th class="nosort text-right pr-25">Ações</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($precificacoes as $categoria) : ?>
+                                    <?php foreach ($formas as $forma) : ?>
                                         <tr>
-                                            <td><?php echo $categoria->precificacao_id; ?></td>
-                                            <td><?php echo $categoria->precificacao_categoria; ?></td>
-                                            <td><?php echo 'R$&nbsp;'.$categoria->precificacao_valor_hora; ?></td>
-                                            <td><?php echo 'R$&nbsp;'.$categoria->precificacao_valor_mensalidade; ?></td>
-                                            <td class="text-center"><?php echo $categoria->precificacao_numero_vagas; ?></td>
-                                            <td><?php echo ($categoria->precificacao_ativa == 1 ? 
+                                            <td><?php echo $forma->forma_pagamento_id ; ?></td>
+                                            <td><?php echo $forma->forma_pagamento_nome; ?></td>
+                                            <td><?php echo ($forma->forma_pagamento_ativa == 1 ? 
                                                 '<span class="badge badge-pill badge-success mb-1"><i class="fas fa-lock-open"></i>&nbsp;Sim</span>' : '<span class="badge badge-pill badge-warning mb-1"><i class="fas fa-lock"></i>&nbsp;Não</span>'); ?>   
                                             </td>
 
                                             <td>
                                                 <div class="text-right">
-                                                    <a data-toggle="tooltip" data-placement="bottom" title="Editar <?php echo $this->router->fetch_class(); ?>" href="<?php echo base_url($this->router->fetch_class().'/core/'. $categoria->precificacao_id); ?>" class="btn btn-icon btn-primary"><i class="ik ik-edit-2"></i></a>
-                                                    <button type="button"  class="btn btn-icon btn-danger" data-toggle="modal" data-target="#categoria-<?php echo $categoria->precificacao_id; ?>"><i class="ik ik-trash-2"></i></button> 
+                                                    <a data-toggle="tooltip" data-placement="bottom" title="Editar <?php echo $this->router->fetch_class(); ?>" href="<?php echo base_url($this->router->fetch_class().'/core/'. $forma->forma_pagamento_id ); ?>" class="btn btn-icon btn-primary"><i class="ik ik-edit-2"></i></a>
+                                                    <button type="button"  class="btn btn-icon btn-danger" data-toggle="modal" data-target="#forma-<?php echo $forma->forma_pagamento_id ; ?>"><i class="ik ik-trash-2"></i></button> 
                                                 </div>
                                             </td>
                                         </tr>
 
                            
-                                        <div class="modal fade" id="categoria-<?php echo $categoria->precificacao_id; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterLabel" aria-hidden="true">
+                                        <div class="modal fade" id="forma-<?php echo $forma->forma_pagamento_id; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterLabel" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -111,7 +105,7 @@
                                                   </div>
                                                   <div class="modal-footer">
                                                     <button  type="button" data-toggle="tooltip" data-placement="bottom" title="Cancelar" class="btn btn-secondary" data-dismiss="modal">Não, voltar</button>
-                                                    <a data-toggle="tooltip" data-placement="bottom" title="Excluir <?php echo $this->router->fetch_class(); ?>" href="<?php echo base_url($this->router->fetch_class().'/del/'. $categoria->precificacao_id); ?>" class="btn btn-danger">Sim, Excluir</a>
+                                                    <a data-toggle="tooltip" data-placement="bottom" title="Excluir <?php echo $this->router->fetch_class(); ?>" href="<?php echo base_url($this->router->fetch_class().'/del/'. $forma->forma_pagamento_id); ?>" class="btn btn-danger">Sim, Excluir</a>
                                                 </div>
                                             </div>
                                         </div>
