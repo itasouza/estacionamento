@@ -1,6 +1,8 @@
 (function($) {
     'use strict';
     $(document).ready(function() {
+
+        /*
         $("#dropper-default").dateDropper({
             dropWidth: 200,
             dropPrimaryColor: "#1abc9c",
@@ -91,16 +93,21 @@
             dropBorderRadius: "20px",
             dropShadow: "0 0 20px 0 rgba(26, 188, 156, 0.6)"
         }),
+       */
         $('#inlinedatetimepicker').datetimepicker({
             inline: true,
             sideBySide: true
         });
+
         $('#datepicker').datetimepicker({
             format: 'L'
         });
+
         $('#timepicker').datetimepicker({
             format: 'LT'
         });
+       
+
         $('.demo').each( function() {
             //
             // Dear reader, it's actually very easy to initialize MiniColors. For example:

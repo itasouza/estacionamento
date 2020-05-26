@@ -141,12 +141,13 @@ class Mensalistas extends CI_Controller{
             		'mensalista'  => $this->core_model->get_by_id('mensalistas',array('mensalista_id' => $mensalista_id)),
 
 				    'styles' => array(
-				        'dist/css/bootstrap-datepicker/bootstrap-datepicker.min.css'		
+				        'dist/css/bootstrap-datepicker/bootstrap-datepicker.min.css',		
 				    ),
 
 		  			'scripts' => array(
 		  				'plugins/mask/jquery.mask.min.js',
 		  				'plugins/mask/custom.js',
+		  				'plugins/moment/moment.js',
 		  				'plugins/bootstrap-datepicker/bootstrap-datepicker.min.js',
 		  				'plugins/bootstrap-datepicker/data-customizada.js',
 		  			),

@@ -67,7 +67,7 @@
 
                              <div class="col-md-4 mb-20">
                                 <label>Data de Nascimento</label>
-                                <input type="text" class="form-control datepicker" name="mensalista_data_nascimento" 
+                                <input type="text" class="form-control datepicker" id="datepicker" name="mensalista_data_nascimento" 
                                 value="<?php echo(isset($mensalista) ? $mensalista->mensalista_data_nascimento : set_value("mensalista_data_nascimento")); ?>">
                                 <?php echo form_error('mensalista_data_nascimento', '<div class="text-danger">','</div>'); ?>
                             </div>
