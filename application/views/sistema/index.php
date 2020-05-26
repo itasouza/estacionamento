@@ -49,6 +49,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="card">
+						
 						<div class="card-header"><?php echo(isset($sistema)? '<i class="ik ik-calendar ik-2x"></i> &nbsp;Data da última alteração: &nbsp;'.
 						formata_data_banco_com_hora($sistema->sistema_data_alteracao) : '' ) ?></div>
 
@@ -200,11 +201,12 @@
 		</div>
 
 
-		<footer class="footer">
-			<div class="w-100 clearfix">
-				<span class="text-center text-sm-left d-md-inline-block">Copyright © <?php echo date('Y'); ?> ThemeKit v2.0. All Rights Reserved.</span>
-				<span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Customizado <i class="fas fa-code text-danger"></i> by <a href="javascript:void" class="text-dark">Itamar Souza</a></span>
-			</div>
-		</footer>
+
+    <footer class="footer">
+        <div class="w-100 clearfix">
+            <span class="text-center text-sm-left d-md-inline-block">Copyright © <?php echo date('Y'); ?> All Rights Reserved.</span>
+            <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Customizado <i class="fas fa-code text-danger"></i> by <a href="javascript:void" class="text-dark">Itamar Souza</a></span>
+        </div>
+    </footer>
 
 	</div>

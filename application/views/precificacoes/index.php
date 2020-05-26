@@ -61,10 +61,12 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
+                        
                         <div class="card-header d-block">
                             <a class="btn bg-blue float-right text-white" data-toggle="tooltip" data-placement="right" title="Cadastrar <?php echo $this->router->fetch_class(); ?>"
                             href="<?php echo base_url($this->router->fetch_class().'/core/'); ?>">+ Novo</a>
                         </div>
+
                         <div class="card-body">
                             <table class="table data-table">
                                 <thead>
@@ -135,11 +137,11 @@
     </div>
 
 
+
     <footer class="footer">
         <div class="w-100 clearfix">
-            <span class="text-center text-sm-left d-md-inline-block">Copyright © <?php echo date('Y'); ?> ThemeKit v2.0. All Rights Reserved.</span>
+            <span class="text-center text-sm-left d-md-inline-block">Copyright © <?php echo date('Y'); ?> All Rights Reserved.</span>
             <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Customizado <i class="fas fa-code text-danger"></i> by <a href="javascript:void" class="text-dark">Itamar Souza</a></span>
         </div>
     </footer>
-
 </div>
