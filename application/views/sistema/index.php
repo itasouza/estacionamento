@@ -172,8 +172,8 @@
 										<label>Texto do ticket de estacionamento</label>
 										<textarea class="form-control" name="sistema_texto_ticket"><?php echo(isset($sistema) ? $sistema->sistema_texto_ticket : set_value("sistema_texto_ticket"));?></textarea>
 											<?php echo form_error('sistema_texto_ticket', '<div class="text-danger">','</div>'); ?>
-										</div>
 									</div>
+								</div>
 
 
 									<?php if(isset($sistema)): ?>
