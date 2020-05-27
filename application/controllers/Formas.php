@@ -89,7 +89,7 @@ class Formas extends CI_Controller{
               //erro de validação
 
         $data = array(
-          'titulo' => 'Cadastrar forma de pagamento',
+          'titulo' => 'Cadastrar pagamento',
           'sub_titulo' => 'Chegou a hora de cadastrar a forma de pagamento',
           'icone_view' => 'fas fa-comment-dollar',
  

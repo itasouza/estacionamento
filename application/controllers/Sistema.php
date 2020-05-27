@@ -74,6 +74,7 @@ class Sistema extends CI_Controller{
           $data = html_escape($data);
 
           $this->core_model->update('sistema',$data,array('sistema_id' => 1));
+          $this->session->set_flashdata('sucesso','Dados salvos com sucesso');
           redirect($this->router->fetch_class());
 
           //visualizar os dados

@@ -23,7 +23,7 @@ function definirDatePicker() {
     };
 
     $('.datepicker').datepicker({
-        format: 'dd/mm/yyyy',
+        dateFormat: 'yyyy-mm-dd',
         autoclose: true,
         orientation: 'bottom auto',
         todayHighlight: true,
