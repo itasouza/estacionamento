@@ -86,7 +86,7 @@
                                     <?php foreach ($mensalidades as $mensalidade) : ?>
                                         <tr>
                                             <td><?php echo $mensalidade->mensalidade_id ; ?></td>
-                                            <td><?php echo $mensalidade->mensalista_nome ; ?></td>
+                                            <td><i class="ik ik-eye text-info"></i>&nbsp;<a data-toggle="tooltip" data-placement="bottom" title="Visualizar mensalista <?php echo $mensalidade->mensalista_nome ; ?>" href="<?php echo base_url('mensalistas/core/'.$mensalidade->mensalidade_id); ?> "><?php echo $mensalidade->mensalista_nome ; ?></a> </td>
                                             <td><?php echo $mensalidade->mensalista_cpf ; ?></td>
                                             <td><?php echo $mensalidade->precificacao_categoria ; ?></td>
                                             <td><?php echo 'R$&nbsp;'.$mensalidade->precificacao_valor_mensalidade ; ?></td>

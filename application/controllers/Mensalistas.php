@@ -222,7 +222,7 @@ class Mensalistas extends CI_Controller{
           		if($this->db->table_exists('mensalidades')){
 
           			if($this->core_model->get_by_id('mensalidades',array('mensalidade_mensalista_id' => $mensalista_id,'mensalidade_status' => 0 ))){
-          				$this->session->set_flashdata('error','Mensalista com débitos pendentes não ser desativado');
+          				$this->session->set_flashdata('error','<i class="fas fa-hand-holding-usd"></i>&nbsp Mensalista com débitos pendentes não ser desativado');
           				redirect($this->router->fetch_class());
           			}
           		}

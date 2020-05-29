@@ -144,16 +144,29 @@ class Precificacoes extends CI_Controller{
 
 
  				$precificacao_ativa = $this->input->post('precificacao_ativa');
+
  				if($precificacao_ativa == 0){
 
  					if($this->db->table_exists('estacionar')){
 
  						if($this->core_model->get_by_id('estacionar',array('estacionar_precificacao_id' => $precificacao_ativa,'estacionar_status' => 0 ))){
- 							$this->session->set_flashdata('error','Está categoria está sendo utlizada em estacionar');
+ 							$this->session->set_flashdata('error','Está categoria está sendo utlizada em <i class="fas fa-parking"></i>&nbsp estacionar');
  							redirect($this->router->fetch_class());
  						}
  					}
  				};
+
+        if($precificacao_ativa == 0){
+
+          if($this->db->table_exists('mensalidades')){
+
+            if($this->core_model->get_by_id('mensalidades',array('mensalidade_precificacao_id' => $precificacao_id,'mensalidade_status' => 0 ))){
+              $this->session->set_flashdata('error','Está categoria está sendo utlizada em <i class="fas fa-hand-holding-usd"></i>&nbsp mensalidades');
+              redirect($this->router->fetch_class());
+            }
+          }
+        };
+
 
  				$data = elements(
  					array(
