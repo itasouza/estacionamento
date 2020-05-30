@@ -100,7 +100,7 @@
 
                                             <td>
                                                 <div class="text-right">
-                                                    <a data-toggle="tooltip" data-placement="bottom" title="Editar <?php echo $this->router->fetch_class(); ?>" href="<?php echo base_url($this->router->fetch_class().'/core/'. $mensalidade->mensalidade_id); ?>" class="btn btn-icon btn-primary"><i class="ik ik-edit-2"></i></a>
+                                                    <a data-toggle="tooltip" data-placement="bottom" title="<?php echo($mensalidade->mensalidade_status == 1 ? 'Visualizar' : 'Editar' )?> <?php echo $this->router->fetch_class(); ?>" href="<?php echo base_url($this->router->fetch_class().'/core/'. $mensalidade->mensalidade_id); ?>" class="btn btn-icon btn-primary"><i class="<?php echo ($mensalidade->mensalidade_status == 1 ? 'ik ik-eye': 'ik ik-edit-2')?>"></i></a>
                                                     <button type="button"  class="btn btn-icon btn-danger" data-toggle="modal" data-target="#mensalidade-<?php echo $mensalidade->mensalidade_id; ?>"><i class="ik ik-trash-2"></i></button> 
                                                 </div>
                                             </td>
