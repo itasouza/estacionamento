@@ -80,8 +80,8 @@
 
                 <div class="col-md-4 mb-3">
                   <label for="">Melhor dia de vencimento</label>
-                  <input type="text" class="form-control mensalista_dia_vencimento" name="mensalidade_data_vencimento" value="<?php echo (isset($mensalidade) ? $mensalidade->mensalidade_data_vencimento : set_value('mensalidade_data_vencimento')) ?>" readonly="">
-                  <?php echo form_error('mensalidade_data_vencimento', '<div class="text-danger">', '</div>') ?>
+                  <input type="text" class="form-control mensalista_dia_vencimento" name="mensalidade_mensalista_dia_vencimento" value="<?php echo (isset($mensalidade) ? $mensalidade->mensalidade_mensalista_dia_vencimento : set_value('mensalidade_mensalista_dia_vencimento')) ?>" readonly="">
+                  <?php echo form_error('mensalidade_mensalista_dia_vencimento', '<div class="text-danger">', '</div>') ?>
                 </div>
 
               </div>

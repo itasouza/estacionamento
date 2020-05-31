@@ -215,6 +215,10 @@ class Mensalistas extends CI_Controller{
           if($this->form_validation->run()){
 
 
+            echo '<pre>';
+             print_r($data['mensalista']);
+             exit();
+
 
           	$mensalista_ativo = $this->input->post('mensalista_ativo');
           	if($mensalista_ativo == 0){
@@ -287,8 +291,8 @@ class Mensalistas extends CI_Controller{
             	);
 
 				    //visualizar os dados
-				     //echo '<pre>';
-				     //print_r($data['mensalista']);
+				    // echo '<pre>';
+				    // print_r($data['mensalista']);
 				    // exit();
 
             	$this->load->view('layout/header', $data);
